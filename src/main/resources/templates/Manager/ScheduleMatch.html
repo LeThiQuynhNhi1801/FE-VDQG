@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Thi Đấu</title>
+    <link rel="stylesheet" href="/css/ListMatch.css">
+    <link rel="stylesheet" href="/css/Home.css">
+</head>
+<body>
+<div class="sidebar">
+    <h2>Quản trị viên</h2>
+    <ul>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Giải đấu</a>
+            <div class="dropdown-content">
+                <a href="/addLeague">Điều lệ</a>
+                <a href="/listmatch">Lịch thi đấu</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Cầu thủ</a>
+            <div class="dropdown-content">
+                <a href="/playerteam">Danh sách cầu thủ</a>
+                <a href="/addplayer">Thêm cầu thủ mới</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Thống kê</a>
+            <div class="dropdown-content">
+                <a href="/bxhteam">BXH Đội bóng</a>
+                <a href="/bxhfairplay">BXH FairPlay</a>
+                <a href="/bxhgoals">BXH Vua phá lưới</a>
+                <a href="/bxhticket">BXH Khán giả</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Trọng tài</a>
+            <div class="dropdown-content">
+                <a href="/addreferee">Thêm mới trọng tài</a>
+                <a href="/assignreferee">Phân công trọng tài</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Yêu cầu</a>
+            <div class="dropdown-content">
+                <a href="/">Xem yêu cầu</a>
+                <a href="#">Đã Phê duyệt </a>
+                <a href="#">Đã Từ chối </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <h2>Lịch Thi Đấu</h2>
+    <div id="list_match">
+        <div class="match">
+            <div class="teams">
+                <span class="home-team">Đội A</span> vs <span class="away-team">Đội B</span>
+            </div>
+            <div class="details">
+                <p>Sân Vận Động: Sân A</p>
+                <p>Thời Gian: 19:00, 15/08/2024</p>
+            </div>
+            <div class="actions">
+                <button onclick="viewLineup('Đội A', 'Đội B')">Xem Đội Hình</button>
+                <button onclick="registerLineup('Đội A', 'Đội B')">Đăng Kí Đội Hình</button>
+            </div>
+        </div>
+
+        <div class="match">
+            <div class="teams">
+                <span class="home-team">Đội C</span> vs <span class="away-team">Đội D</span>
+            </div>
+            <div class="details">
+                <p>Sân Vận Động: Sân B</p>
+                <p>Thời Gian: 21:00, 15/08/2024</p>
+            </div>
+            <div class="actions">
+                <button onclick="viewLineup('Đội C', 'Đội D')">Xem Đội Hình</button>
+                <button onclick="registerLineup('Đội C', 'Đội D')">Đăng Kí Đội Hình</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thêm các trận đấu khác tương tự -->
+</div>
+
+<script src="/js/ListMatch.js"></script>
+</body>
+</html>

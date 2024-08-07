@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cập nhật trận đấu</title>
+  <link rel="stylesheet" href="/css/AddEvent.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">V-League</div>
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Lịch thi đấu</a></li>
+      <li><a href="#">Cập nhật trận đấu</a></li>
+      <li><a href="#">Báo cáo</a></li>
+      <li><a href="#">Quản lý người dùng</a></li>
+    </ul>
+    <div class="account">
+      <span>Nhân viên A</span>
+      <a href="#">Đăng xuất</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="match-info">
+    <h1>Hà Nội FC vs Hoàng Anh Gia Lai</h1>
+    <p>Thời gian: 20/07/2024 - 18:00</p>
+    <p>Địa điểm: Sân vận động Mỹ Đình</p>
+    <p>Trọng tài: Nguyễn Văn B</p>
+  </section>
+
+  <section class="match-events">
+    <h2>Sự kiện trận đấu</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Thời gian</th>
+        <th>Loại sự kiện</th>
+        <th>Mô tả</th>
+        <th>Đội/Cầu thủ liên quan</th>
+        <th>Hành động</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Các sự kiện đã cập nhật -->
+      <tr>
+        <td>15'</td>
+        <td>Bàn thắng</td>
+        <td>Cầu thủ A ghi bàn</td>
+        <td>Hà Nội FC - Cầu thủ A</td>
+        <td><button>Sửa</button> <button>Xóa</button></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <form class="add-event-form">
+      <h3>Thêm sự kiện</h3>
+      <label for="event-time">Thời gian:</label>
+      <input type="number" id="event-time" name="event-time" min="0">
+
+      <label for="event-type">Loại sự kiện:</label>
+      <select id="event-type" name="event-type">
+        <option value="goal">Bàn thắng</option>
+        <option value="yellow-card">Thẻ vàng</option>
+        <option value="red-card">Thẻ đỏ</option>
+        <option value="substitution">Thay người</option>
+        <option value="foul">Phạm lỗi</option>
+      </select>
+
+      <label for="event-description">Mô tả:</label>
+      <input type="text" id="event-description" name="event-description">
+
+      <label for="event-team">Đội/Cầu thủ liên quan:</label>
+      <select id="event-team" name="event-team">
+        <option value="hanoi-fc">Hà Nội FC</option>
+        <option value="hoang-anh-gia-lai">Hoàng Anh Gia Lai</option>
+      </select>
+
+      <button type="submit">Thêm sự kiện</button>
+    </form>
+  </section>
+
+  <section class="live-score">
+    <h2>Tỷ số trực tiếp</h2>
+    <p>Hà Nội FC: <span id="score-hanoi">1</span></p>
+    <p>Hoàng Anh Gia Lai: <span id="score-hagl">0</span></p>
+  </section>
+
+  <section class="report">
+    <h2>Báo cáo trận đấu</h2>
+    <button>Xuất báo cáo (PDF)</button>
+    <button>Xuất báo cáo (Excel)</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng kí cầu thủ</title>
+  <style>
+    #notification {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 10;
+      display: none; /* Ẩn thông báo mặc định */
+    }
+
+    #notification h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #notification button {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    #notification button:hover {
+      background-color: #eee;
+    }
+    /* Thiết lập CSS cho bảng */
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin-left: 20%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Thiết lập CSS cho button */
+    .register-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: justify;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-left: 48%;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .register-button:hover {
+      background-color: #45a049;
+    }
+    h2{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h2>Đăng kí đội hình chính thức</h2>
+<button id="register-button">Đăng kí</button>
+<table id="playerTable">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Số áo</th>
+    <th>Vị trí</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Dữ liệu của bảng sẽ được thêm vào đây -->
+  <tr >
+    <td>1</td>
+    <td>John Doe</td>
+    <td>10</td>
+    <td>Trung vệ</td>
+    <td><input type="checkbox" class="player" value="1"></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>John Doe</td>
+    <td>10</td>
+    <td>Trung vệ</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>John Doe</td>
+    <td>10</td>
+    <td>Trung vệ</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>John Doe</td>
+    <td>10</td>
+    <td>Trung vệ</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>John Doe</td>
+    <td>10</td>
+    <td>Trung vệ</td>
+    <td><input type="checkbox"></td>
+  </tr>
+
+
+  <!-- Thêm dữ liệu cho các cầu thủ khác tương tự như trên -->
+  </tbody>
+</table>
+</body>
+<script src="/js/updatemainlineup.js"></script>
+<script src="/Response/Player.js"></script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Xếp Hạng Đội Bóng</title>
+  <link rel="stylesheet" href="/css/BXHTeam.css">
+  <link rel="stylesheet" href="/css/Home.css">
+</head>
+<body>
+<div class="sidebar">
+  <h2>Quản trị viên</h2>
+  <ul>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Giải đấu</a>
+      <div class="dropdown-content">
+        <a href="/addLeague">Thêm giải đấu mới</a>
+        <a href="/chooseopenteam">xếp Lịch thi đấu</a>
+        <a href="/schedulematch">Lịch thi đấu</a>
+        <a href="#">Điều lệ</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Đội bóng</a>
+      <div class="dropdown-content">
+        <a href="/teamleague">Danh sách đội bóng</a>
+        <a href="/addteam">Thêm đội bóng mới</a>
+        <a href="#">Chỉnh sửa đội bóng</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Thống kê</a>
+      <div class="dropdown-content">
+        <a href="/bxhteam">BXH Đội bóng</a>
+        <a href="/bxhfairplay">BXH FairPlay</a>
+        <a href="/bxhgoals">BXH Vua phá lưới</a>
+        <a href="/bxhticket">BXH Khán giả</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Trọng tài</a>
+      <div class="dropdown-content">
+        <a href="/addreferee">Thêm mới trọng tài</a>
+        <a href="/assignreferee">Phân công trọng tài</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Yêu cầu</a>
+      <div class="dropdown-content">
+        <a href="/">Xem yêu cầu</a>
+        <a href="#">Đã Phê duyệt </a>
+        <a href="#">Đã Từ chối </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="container">
+  <h2>Chọn Mùa Giải</h2>
+  <select id="league-select">
+    <option value="">Chọn mùa giải</option>
+    <!-- Options sẽ được thêm động từ API -->
+  </select>
+  <h2>Bảng Xếp Hạng Đội Bóng</h2>
+  <table id="ranking-table">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tên Đội Bóng</th>
+      <th>Số Trận</th>
+      <th>Số Trận Thắng</th>
+      <th>Số Trận Hòa</th>
+      <th>Số Trận Thua</th>
+      <th>Hiệu Số</th>
+      <th>Điểm</th>
+    </tr>
+    </thead>
+    <tbody id="bxh">
+    <!-- Dữ liệu mẫu -->
+    <tr>
+      <td>1</td>
+      <td>Thanh Hoa</td>
+      <td>20</td>
+      <td>12</td>
+      <td>5</td>
+      <td>3</td>
+      <td>+15</td>
+      <td>41</td>
+    </tr>
+
+    <!-- Thêm nhiều đội bóng khác tùy ý -->
+    </tbody>
+  </table>
+</div>
+<script src="/js/BXHTeam.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+button{
+    height: 50px;
+    width: 100px;
+    background-color: #009933;
+}
+
+.match {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.match-info {
+    margin-bottom: 20px;
+}
+
+.team-names {
+    text-align: center;
+}
+
+.stadium, .time {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-button {
+    text-align: center;
+}
+
+.register-button a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,63 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.chon-doi-hinh {
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.danh-sach-cau-thu {
+    width: 45%;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#ds-cau-thu {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.cau-thu {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+
+
+}
+
+.cau-thu input {
+    margin-right: 10px;
+}
+
+#btn-dang-ky {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #009933;
+    color: #fff;
+    border: none;
+}
