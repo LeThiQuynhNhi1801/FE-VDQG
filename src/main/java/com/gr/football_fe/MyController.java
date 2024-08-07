@@ -20,7 +20,7 @@ public class MyController {
     @GetMapping("schedulematch")
     public String schedulematch(){ return "/Admin/ScheduleMatch";}
 
-    @GetMapping("listmatch/{idTeam}")
+    @GetMapping("listmatch")
     public String schedule(){ return "/Manager/ScheduleMatch";}
 
     @GetMapping("chooseopenteam")
@@ -45,13 +45,21 @@ public class MyController {
     public String updatereservelineup(){ return "/Manager/updatereservelineup";}
 
     @GetMapping("bxhteam")
-    public String BXHTeam(){ return "BXHTeam";}
+    public String BXHTeam(){ return "/Admin/BXHTeam";}
 
     @GetMapping("bxhfairplay")
-    public String BXHFairplay(){ return "BXHFairplay";}
+    public String BXHFairplay(){ return "/Admin/BXHFairplay";}
 
     @GetMapping("bxhgoals")
-    public String BXHGoal(){ return "BXHGoals";}
+    public String BXHGoal(){ return "/Admin/BXHGoals";}
+    @GetMapping("bxhteammanager")
+    public String BXHTeamManager(){ return "/Manager/BXHTeam";}
+
+    @GetMapping("bxhfairplaymanager")
+    public String BXHFairplayManager(){ return "/Manager/BXHFairplay";}
+
+    @GetMapping("bxhgoalsmanager")
+    public String BXHGoalManager(){ return "/Manager/BXHGoals";}
 
     @GetMapping("historyteam/{id}")
     public String historyteam(){ return "HistoryTeam";}
@@ -59,7 +67,13 @@ public class MyController {
     @GetMapping("detailmatch/{id}")
     public String detailmatch(){ return "DetailMatch";}
 
-    @GetMapping("lineup/{idTeam}/{idMatch}")
+    @GetMapping("lineup/{idMatch}")
     public String lineup(){ return "/Manager/Lineup";}
+
+    @GetMapping("addplayer")
+    public String addPlayer(){ return "/Manager/AddPlayer";}
+
+    @GetMapping("playerteam")
+    public String PlayerTeam(){ return "/Manager/PlayerTeam";}
 }
 

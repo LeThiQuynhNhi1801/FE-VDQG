@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const parts = url.split('/');
     const number = parts[parts.length - 2];
     const number1 = parts[parts.length - 1];
-    var urlR = 'http://127.0.0.1:8081/Api/V1/gamecoming/'+number1;
+    var team = window.localStorage.getItem("team")
+    var urlR = 'http://127.0.0.1:8081/Api/V1/gamecoming/'+team;
 
     xhr.open('GET', urlR, true);
     xhr.setRequestHeader('Content-Type', 'application/json');

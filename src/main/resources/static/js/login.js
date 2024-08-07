@@ -21,6 +21,7 @@ function login(){
             if(data.role=="[ROLE_ADMIN]"){
                 window.location = "/home"
             }else if (data.role == "[ROLE_MANAGER]"){
+                window.localStorage.setItem("team" , data.idTeam)// Hiển thị dữ liệu trong console
                 window.location="/homemanager"
             }
         }

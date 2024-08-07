@@ -4,11 +4,11 @@ function getLineup(){
 
 // Phân tích URL và trích xuất phần số
     const parts = url.split('/');
-    const number = parts[parts.length - 2];
+    var team = window.localStorage.getItem("team")
     const number1 = parts[parts.length - 1];
     var xhr = new XMLHttpRequest();
 
-    var urlR = 'http://127.0.0.1:8081/Api/V1/lineup/'+number+"?idMatch="+number1;
+    var urlR = 'http://127.0.0.1:8081/Api/V1/lineup/'+team+"?idMatch="+number1;
 
     // Mở kết nối với API
     xhr.open('GET', urlR, true);
@@ -23,7 +23,7 @@ function getLineup(){
             const data = JSON.parse(xhr.responseText);
             if(data.length!=0){
                 alert("đã đăng kí, xem đội hình")
-                window.location='/lineup/'+number+"/"+number1;
+                window.location='/lineup/'+number1;
             }
         }
         else {
@@ -70,7 +70,6 @@ function postMainLineup(lineupList) {
 // Phân tích URL và trích xuất phần số
     const parts = urls.split('/');
     const number = parts[parts.length - 1];
-    const number2 = parts[parts.length -2];
     // Tạo một object chứa dữ liệu cần gửi đi
     var data = {
         listUser: lineupList
@@ -98,7 +97,7 @@ function postMainLineup(lineupList) {
         if (xhr.status==201) {
             // Xử lý khi request thành công
             alert("dang ki doi dinh chinh thuc thanh cong")
-            window.location = "/signReserve/"+number2+"/"+number;
+            window.location = "/signReserve/"+number;
         } else {
             // Xử lý khi request không thành công
             console.error('Có lỗi xảy ra');
@@ -119,7 +118,7 @@ function getPlayerResponse() {
 
 // Phân tích URL và trích xuất phần số
     const parts = url.split('/');
-    const number = parts[parts.length - 2];
+    const number = window.localStorage.getItem("team")
     // Gọi API để lấy danh sách cầu thủ từ đội bóng có id là teamId
     fetch('http://127.0.0.1:8081/Api/V1/playerListByTeamID/' + number)
         .then(response => response.json())

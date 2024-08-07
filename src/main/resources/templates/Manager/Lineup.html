@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/Home.css">
   <title>Danh sách cầu thủ</title>
   <style>
+    body{
+      margin: 30px 300px;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -20,6 +24,49 @@
   </style>
 </head>
 <body>
+<div class="sidebar">
+  <h2>Quản lí đội bóng</h2>
+  <ul>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Giải đấu</a>
+      <div class="dropdown-content">
+        <a href="/addLeague">Điều lệ</a>
+        <a href="/listmatch">Lịch thi đấu</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Cầu thủ</a>
+      <div class="dropdown-content">
+        <a href="/playerteam">Danh sách cầu thủ</a>
+        <a href="/addplayer">Thêm cầu thủ mới</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Thống kê</a>
+      <div class="dropdown-content">
+        <a href="/bxhteammanager">BXH Đội bóng</a>
+        <a href="/bxhfairplaymanager">BXH FairPlay</a>
+        <a href="/bxhgoalsmanager">BXH Vua phá lưới</a>
+        <a href="/bxhticketmanager">BXH Khán giả</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Sân vận đôộng</a>
+      <div class="dropdown-content">
+        <a href="/addstadium">Thêm mới sân vận động</a>
+        <a href="/updatestadium">Sửa sân vận động</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Yêu cầu</a>
+      <div class="dropdown-content">
+        <a href="/">Xem yêu cầu</a>
+        <a href="#">Đã Phê duyệt </a>
+        <a href="#">Đã Từ chối </a>
+      </div>
+    </li>
+  </ul>
+</div>
 <button onclick="updateLineup()">Sua lineup</button>
 <h2>Danh sách cầu thủ</h2>
 <table id="lineup">

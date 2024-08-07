@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Thi Đấu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="container">
+    <h2>Lịch Thi Đấu</h2>
+    <div id="list_match">
+        <div class="match">
+            <div class="teams">
+                <span class="home-team">Đội A</span> vs <span class="away-team">Đội B</span>
+            </div>
+            <div class="details">
+                <p>Sân Vận Động: Sân A</p>
+                <p>Thời Gian: 19:00, 15/08/2024</p>
+            </div>
+            <div class="actions">
+                <button onclick="viewLineup('Đội A', 'Đội B')">Xem Đội Hình</button>
+                <button onclick="registerLineup('Đội A', 'Đội B')">Đăng Kí Đội Hình</button>
+            </div>
+        </div>
 
+        <div class="match">
+            <div class="teams">
+                <span class="home-team">Đội C</span> vs <span class="away-team">Đội D</span>
+            </div>
+            <div class="details">
+                <p>Sân Vận Động: Sân B</p>
+                <p>Thời Gian: 21:00, 15/08/2024</p>
+            </div>
+            <div class="actions">
+                <button onclick="viewLineup('Đội C', 'Đội D')">Xem Đội Hình</button>
+                <button onclick="registerLineup('Đội C', 'Đội D')">Đăng Kí Đội Hình</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thêm các trận đấu khác tương tự -->
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
